@@ -1,0 +1,63 @@
+body{
+    background-color: #51C44A;
+}
+
+#btn-leer,#custom-label,#btn-revelar {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: transform 0.3s, border-color 0.3s;
+    background-color: #BBFF33;
+}
+
+#btn-leer:hover,#custom-label:hover {
+    transform: scale(1.2);
+    border-color: blue;
+}
+
+#btn-leer{
+    background-color: #33C1FF;
+}
+
+.container-buttons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.show-laberinto{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+#element-show {
+    letter-spacing: 9px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#title-lab{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#button-reveal{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+#btn-revelar{
+    background-color: #FD30D5;
+}
