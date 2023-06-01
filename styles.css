@@ -1,5 +1,5 @@
 body{
-    background-color: #51C44A;
+    background-color: #352E2E;
 }
 
 #btn-leer,#custom-label,#btn-revelar {
@@ -42,9 +42,11 @@ body{
     letter-spacing: 9px; 
     font-size: 18px;
     font-weight: bold;
+    color: #F0EFEF;
 }
 
 #title-lab{
+    font-size: 25px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -58,6 +60,26 @@ body{
     display: none;
 }
 
-#btn-revelar{
-    background-color: #FD30D5;
+.table-ruta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;   
+    display: none;
 }
+
+#btn-revelar{
+    background-color: #4D79F8;
+}
+
+#table-rute{
+    width: 20%;
+    justify-content: center;
+    text-align: center;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2,th{
+    color: #EBEEF8;
+}
+
