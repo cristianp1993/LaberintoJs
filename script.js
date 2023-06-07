@@ -139,7 +139,10 @@ function encontrarCamino(laberinto) {
     .fill()
     .map(() => Array(laberinto[0].length).fill(false));
 
-  //Cola para el BFS que permitira buscar el camino
+  //Cola para el BFS que permitira buscar el camino Breadth-First Search (Búsqueda en Anchura),
+  //La variable "cola" se utiliza como una estructura de datos en forma de cola (FIFO - First In, First Out) para almacenar los nodos o posiciones a visitar durante el recorrido del laberinto. Se agregan nodos a la cola y se procesan en orden de llegada, lo que asegura que se explore primero las posiciones más cercanas al punto de partida antes de expandirse hacia posiciones más lejanas.
+
+  // En resumen, la cola se utiliza como una herramienta para organizar y controlar el orden en que se exploran las posiciones del laberinto durante el proceso de búsqueda del camino más corto.
   const cola = [];
   // Array para almacenar el camino encontrado
   const camino = [];
