@@ -38,6 +38,61 @@ function mostrarContenido(contenido) {
   elemento.innerHTML = "";
   arrayLaberinto = contenido.split("\n");
 
+<<<<<<< HEAD
+
+  //console.log("El tamaño de la linea es: " +arrayLaberinto[0].length)
+  const spanColumnas = document.createElement("span");
+  const spaceIni = document.createElement("span");
+  spaceIni.style.paddingRight = "1px";
+  spaceIni.innerHTML = "&#128512";
+  spaceIni.style.letterSpacing  = "0px";  
+  spanColumnas.appendChild(spaceIni);
+  for (let index = 0; index < arrayLaberinto[0].length; index++) {
+    const character = document.createElement("span");
+    character.textContent = index;
+    character.style.fontSize = "12px";
+    character.style.color = "#9ED0DF";
+    character.style.paddingRight = "20.5px";
+    character.style.letterSpacing  = "0px";   
+    spanColumnas.appendChild(character);
+    
+  }
+  
+  elemento.appendChild(spanColumnas);
+  elemento.appendChild(document.createElement("br"));
+  //recorro las lineas para mostrar el laberinto dando un valor mas grande a los guiones que
+  //a los astericos para compensar el tamaño al pintar el laberinto
+  let filaCont = 0;
+  arrayLaberinto.forEach((linea) => {
+    const spanLinea = document.createElement("span");
+    const fila = document.createElement("span");
+    fila.textContent = filaCont;
+    fila.style.fontSize = "12px";
+    fila.style.color = "#9ED0DF";
+    fila.style.paddingRight = "20.5px";
+    fila.style.letterSpacing  = "0px"; 
+
+    for (let i = 0; i < linea.length; i++) {
+      const character = document.createElement("span");
+      character.textContent = linea[i];
+
+      if (linea[i] === "-") {
+        character.style.fontSize = "23px";
+      } else if (linea[i] === "*") {
+        character.style.fontSize = "16px";
+      }
+      // Agregar un espacio después de cada carácter
+      const space = document.createTextNode(" ");
+      spanLinea.appendChild(character);
+      spanLinea.appendChild(space);
+    }
+    elemento.appendChild(fila);
+    
+    elemento.appendChild(spanLinea);
+    elemento.appendChild(document.createElement("br"));
+
+    filaCont ++
+=======
   //recorro las lineas para mostrar el laberinto dando un valor mas grande a los guiones que
   //a los astericos para compensar el tamaño al pintar el laberinto
   arrayLaberinto.forEach((linea) => {
@@ -58,6 +113,7 @@ function mostrarContenido(contenido) {
 
     elemento.appendChild(spanLinea);
     elemento.appendChild(document.createElement("br"));
+>>>>>>> ecf98d4f9be455509ee21c27504cab4c2be81a11
   });
   if (contenido != null) {
     document.getElementById("button-reveal").style.display = "block";
@@ -74,8 +130,17 @@ document.getElementById("btn-revelar").addEventListener(
       const caminoMasCorto = encontrarCamino(arrayLaberinto);
       console.log("Camino más corto:");
       console.log(caminoMasCorto);
+<<<<<<< HEAD
+      if (caminoMasCorto.length>0) {
+        
+        mostrarRutaEnPantalla(caminoMasCorto)
+      }else{
+        alert("No hay camino para para llegar del punto A al B")
+      }
+=======
 
       mostrarRutaEnPantalla(caminoMasCorto)
+>>>>>>> ecf98d4f9be455509ee21c27504cab4c2be81a11
       document.getElementById("div-table").style.display ="block";
     } else {
       console.log(
@@ -245,4 +310,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       customLabel.textContent = "Cargar archivo";
     }
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> ecf98d4f9be455509ee21c27504cab4c2be81a11
